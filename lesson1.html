@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Vue!</h1>
+
+    <div id="app">
+        <h2 v-if="showBooks"> {{ title }} {{ someNumber}} </h2>
+        <button v-on:click="someNumber++">increase someNumber</button>
+        <div @click="performTheFunny"> click this to do something funny </div>
+        <button @click="toggleShow">
+            <span v-if="showBooks">hide text</span>
+            <span v-if="showBooks == false">show text</span>
+        </button>
+    </div>
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
